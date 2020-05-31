@@ -1,0 +1,33 @@
+{
+  "name": "winston-udp-transport",
+  "version": "1.0.0",
+  "description": "A winston transport for UDP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raz6tamir/winston-UDP-transport"
+  },
+  "keywords": [
+    "winston",
+    "logstash",
+    "splunk",
+    "transport",
+    "udp",
+    "winston-udp-transport"
+  ],
+  "author": "raz6tamir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raz6tamir/winston-UDP-transport/issues"
+  },
+  "homepage": "https://github.com/raz6tamir/winston-UDP-transport#readme",
+  "dependencies": {
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/winston": "^2.4.4"
+  }
+}
