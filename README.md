@@ -5,51 +5,53 @@ Can be used with [splunk](https://docs.splunk.com/Documentation/Splunk/8.0.4/Dat
 
 ## Usage
 ### Installing
+using npm:
 ```
-npm install udp-transport-winston --save`
+npm install winston udp-transport-winston --save
 ```
+using yarn:
 ```
-yarn add udp-transport-winston
+yarn add winston udp-transport-winston
 ```
 
 ### Example
 
 ```TypeScript
-import {winston, Logger} from 'winston';
-import {UDPTransport} from 'winston-udp-transport';
+import { winston } from 'winston';
+import { UDPTransport } from 'udp-transport-winston';
 
-const logger:Logger = winston.createLogger({
+const logger: winston.Logger = winston.createLogger({
     level:'info',
     transports: [
         new UDPTransport({
             host: 'localhost',
-            port: 6666
+            port: 1234
         })
     ]
 });
 ```
 or
 ```TypeScript
-import {winston, Logger} from 'winston';
-import {UDPTransport} from 'winston-udp-transport';
+import { winston } from 'winston';
+import { UDPTransport } from 'udp-transport-winston';
 
-const logger:Logger = winston.createLogger({
+const logger:winston.Logger = winston.createLogger({
     level:'info'
 });
 
 logger.add(new UDPTransport({
     host: 'localhost',
-    port: 6666
-}))
+    port: 1234
+}));
 ```
 
 ## API
 
 * `class UDPTransport`
   * `constructor(options:TransportOptions)`
-    * `options.host` UDP host
-    * `options.port` UDP port
-    * (optional) `options.trailingLineFeed` trailingLineFeed
-    * (optional) `options.trailingLineFeedChar` trailingLineFeedChar
+    * `options.host:string` UDP host
+    * `options.port:number` UDP port
+    * (optional) `options.trailingLineFeed:boolean` if to make single line
+    * (optional) `options.trailingLineFeedChar:string` character to separate messages
     * (optional) Inherited transport options: `options.format`, `options.level`, `options.silent`, `options.handleExceptions`
     
