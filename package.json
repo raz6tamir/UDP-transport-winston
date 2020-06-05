@@ -1,14 +1,14 @@
 {
   "name": "udp-transport-winston",
-  "version": "0.0.1",
-  "description": "A winston transport for UDP.",
+  "version": "0.0.2",
+  "description": "A winston transport for UDP",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leotolk/winston-UDP-transport"
+    "url": "git+https://github.com/leotolk/UDP-transport-winston"
   },
   "keywords": [
     "winston",
@@ -16,15 +16,15 @@
     "splunk",
     "transport",
     "udp",
-    "winston-udp-transport",
+    "udp-transport-winston",
     "typescript"
   ],
   "author": "leotolk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leotolk/winston-UDP-transport/issues"
+    "url": "https://github.com/leotolk/UDP-transport-winston/issues"
   },
-  "homepage": "https://github.com/leotolk/winston-UDP-transport#readme",
+  "homepage": "https://github.com/leotolk/UDP-transport-winston#readme",
   "dependencies": {
     "winston": "^3.2.1"
   },

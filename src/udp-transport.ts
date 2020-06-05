@@ -13,12 +13,8 @@ export class UDPTransport extends Transport {
         this.udpTransportOptions = {
             host: options.host,
             port: options.port,
-            trailingLineFeed: options.trailingLineFeed ?
-                options.trailingLineFeed :
-                DEFAULT_TRANSPORT_OPTIONS.trailingLineFeed,
-            trailingLineFeedChar: options.trailingLineFeedChar ?
-                options.trailingLineFeedChar :
-                DEFAULT_TRANSPORT_OPTIONS.trailingLineFeedChar
+            trailingLineFeed: options.trailingLineFeed || DEFAULT_TRANSPORT_OPTIONS.trailingLineFeed,
+            trailingLineFeedChar: options.trailingLineFeedChar || DEFAULT_TRANSPORT_OPTIONS.trailingLineFeedChar
         };
 
         this.client = dgram.createSocket('udp4');
@@ -46,7 +42,6 @@ export class UDPTransport extends Transport {
         }
 
         const buffer:Buffer = Buffer.from(message);
-        this.client.send(buffer, 0, buffer.length, this.udpTransportOptions.port, this.udpTransportOptions.host, (callback || function () {
-        }));
+        this.client.send(buffer, 0, buffer.length, this.udpTransportOptions.port, this.udpTransportOptions.host, (callback || function () {}));
     }
 }
