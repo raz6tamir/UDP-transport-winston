@@ -23,7 +23,7 @@ import { winston } from 'winston';
 import { UDPTransport } from 'udp-transport-winston';
 
 const logger: winston.Logger = winston.createLogger({
-    level:'info',
+    level: 'info',
     transports: [
         new UDPTransport({
             host: 'localhost',
@@ -37,8 +37,8 @@ or
 import { winston } from 'winston';
 import { UDPTransport } from 'udp-transport-winston';
 
-const logger:winston.Logger = winston.createLogger({
-    level:'info'
+const logger: winston.Logger = winston.createLogger({
+    level: 'info'
 });
 
 logger.add(new UDPTransport({
