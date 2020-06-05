@@ -1,14 +1,15 @@
 {
-  "name": "winston-udp-transport",
-  "version": "1.0.0",
+  "name": "winston-udp-transport-ts",
+  "version": "0.0.1",
   "description": "A winston transport for UDP.",
-  "main": "index.js",
+  "main": "dist/src/index.js",
   "scripts": {
+    "prepare": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raz6tamir/winston-UDP-transport"
+    "url": "git+https://github.com/leotolk/winston-UDP-transport"
   },
   "keywords": [
     "winston",
@@ -18,16 +19,18 @@
     "udp",
     "winston-udp-transport"
   ],
-  "author": "raz6tamir",
+  "author": "leotolk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/raz6tamir/winston-UDP-transport/issues"
+    "url": "https://github.com/leotolk/winston-UDP-transport/issues"
   },
-  "homepage": "https://github.com/raz6tamir/winston-UDP-transport#readme",
+  "homepage": "https://github.com/leotolk/winston-UDP-transport#readme",
   "dependencies": {
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@types/winston": "^2.4.4"
+    "@types/node": "^14.0.9",
+    "@types/winston": "^2.4.4",
+    "typescript": "^3.9.3"
   }
 }

@@ -1,45 +1,27 @@
 # winston-UDP-transport
-A winston transport for UDP.
-Can be used with logstash, splunk.
+A simple winston transport for UDP in typescript.
+Can be used with splunk, logstash or any UDP data inputs.
 
 ## Example
 
-```js
-const logger = require('winston-logstash-transport').createLogger(null, {
-  application: 'website-ssr-prod',
-  logstash: {host: 'logstash-host', port: 12345},
-  transports: [
-    new winston.transports.Console(),
-  ]
-})
-```
-
-```js
-const logger = winston.createLogger({
-    level: 'info',
-    format: winston.format.combine(
-      winston.format.json(),
-      winston.format.timestamp()
-    ),
+```ts
+import {winston} from 'winston';
+import {UDPTransport} from 'winston-udp-transport';
+winston.createLogger({
+    level:'info',
     transports: [
-      new winston.transports.Console(),
-      new LogstashTransport({host: 'logstash-host', port: 12345})
+        new UDPTransport({
+            host: 'localhost',
+            port: 6666
+        })
     ]
-  })
+})
 ```
 
 ## API
 
-* `class LogstashTransport`
+* `class UDPTransport`
 
   * `options`
-  * `options.host`, logstash host
-  * `options.port`, logstash UDP port
-
-* `createLogger()`
-
-  * `application`, The name of application
-  * `hostname=os.hostname()`, The host where application run on.
-  * `level='info'`, log level
-  * `transports=[]`, others transports for winston
-  * `logstash`, options for LogstashTransport
+  * `options.host` UDP host
+  * `options.port` UDP port
