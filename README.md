@@ -1,6 +1,8 @@
 # UDP-transport-winston
 A simple [winston](https://github.com/winstonjs/winston) transport for UDP in typescript.
 
+Working with winston@3.
+
 Can be used with [splunk](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/Monitornetworkports), [logstash (ELK)](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-udp.html) or any other UDP data inputs.
 
 ## Usage
