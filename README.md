@@ -1,4 +1,7 @@
 [![buddy pipeline](https://app.buddy.works/leotolk/udp-transport-winston/pipelines/pipeline/261114/badge.svg?token=4a23dc9261273453374dd1f99c6e1ab45c44d7aa12ee1cb0ec8aedb7a88124d3 "buddy pipeline")](https://app.buddy.works/leotolk/udp-transport-winston/pipelines/pipeline/261114)
+![npm](https://img.shields.io/npm/v/udp-transport-winston)
+![NPM](https://img.shields.io/npm/l/udp-transport-winston)
+
 
 # UDP-transport-winston
 A simple [winston](https://github.com/winstonjs/winston) transport for UDP in typescript.
