@@ -1,6 +1,6 @@
 {
   "name": "udp-transport-winston",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "description": "A winston transport for UDP in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,10 @@
     "url": "https://github.com/leotolk/UDP-transport-winston"
   },
   "release": {
-    "branches": ["master", "next"],
+    "branches": [
+      "master",
+      "next"
+    ],
     "plugins": [
       [
         "@semantic-release/npm",
