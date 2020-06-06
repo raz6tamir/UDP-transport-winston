@@ -1,6 +1,6 @@
 {
   "name": "udp-transport-winston",
-  "version": "1.0.8",
+  "version": "1.0.7",
   "description": "A winston transport for UDP in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,17 +9,12 @@
     "prepare": "npm run lint:fix && npm run build",
     "lint": "eslint 'src/**/*.{js,ts}' --quiet",
     "lint:fix": "eslint 'src/**/*.{js,ts}' --quiet --fix",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/leotolk/UDP-transport-winston"
-  },
-  "release": {
-    "branches": [
-      "master",
-      "next"
-    ]
   },
   "keywords": [
     "winston",
