@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leotolk/UDP-transport-winston"
+    "url": "git+https://github.com/raz-tam/UDP-transport-winston"
   },
   "keywords": [
     "winston",
@@ -28,9 +28,9 @@
   "author": "leotolk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leotolk/UDP-transport-winston/issues"
+    "url": "https://github.com/raz-tam/UDP-transport-winston/issues"
   },
-  "homepage": "https://github.com/leotolk/UDP-transport-winston#readme",
+  "homepage": "https://github.com/raz-tam/UDP-transport-winston#readme",
   "dependencies": {
     "winston": "^3.2.1"
   },
