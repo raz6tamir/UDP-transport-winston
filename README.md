@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/leotolk/UDP-transport-winston.svg?branch=master)](https://travis-ci.com/leotolk/UDP-transport-winston)
+[![Build Status](https://travis-ci.com/raz-tam/UDP-transport-winston.svg?branch=master)](https://travis-ci.com/leotolk/UDP-transport-winston)
 ![npm](https://img.shields.io/npm/v/udp-transport-winston)
 ![NPM](https://img.shields.io/npm/l/udp-transport-winston)
 
