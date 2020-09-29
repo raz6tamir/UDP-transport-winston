@@ -1,6 +1,6 @@
 {
   "name": "udp-transport-winston",
-  "version": "1.1.2",
+  "version": "1.1.5",
   "description": "A winston transport for UDP in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,7 +25,7 @@
     "udp-transport-winston",
     "typescript"
   ],
-  "author": "leotolk",
+  "author": "raz6tamir",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/raz6tamir/UDP-transport-winston/issues"
