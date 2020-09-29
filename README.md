@@ -36,7 +36,7 @@ const logger: winston.Logger = winston.createLogger({
     ]
 });
 ```
-or
+or:
 ```TypeScript
 import { winston } from 'winston';
 import { UDPTransport } from 'udp-transport-winston';
