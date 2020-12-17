@@ -23,7 +23,7 @@ yarn add winston udp-transport-winston
 ### Example
 
 ```TypeScript
-import { winston } from 'winston';
+import winston = require('winston');
 import { UDPTransport } from 'udp-transport-winston';
 
 const logger: winston.Logger = winston.createLogger({
@@ -38,7 +38,7 @@ const logger: winston.Logger = winston.createLogger({
 ```
 or:
 ```TypeScript
-import { winston } from 'winston';
+import winston = require('winston');
 import { UDPTransport } from 'udp-transport-winston';
 
 const logger: winston.Logger = winston.createLogger({

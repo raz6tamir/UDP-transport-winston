@@ -1,8 +1,8 @@
 import * as dgram from 'dgram';
 import { Socket } from 'dgram';
-import * as Transport from 'winston-transport';
 import { TransportOptions } from './models/transport-options';
 import { DEFAULT_TRANSPORT_OPTIONS } from './constants/default-transport-options';
+import Transport = require('winston-transport');
 
 export class UDPTransport extends Transport {
     private udpTransportOptions: TransportOptions;
