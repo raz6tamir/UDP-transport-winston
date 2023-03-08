@@ -1,6 +1,6 @@
 {
   "name": "udp-transport-winston",
-  "version": "1.2.0",
+  "version": "1.2.11-dist",
   "description": "A winston transport for UDP in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
