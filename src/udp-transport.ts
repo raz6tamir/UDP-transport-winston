@@ -1,8 +1,8 @@
-import * as dgram from 'dgram';
+import dgram from 'dgram';
 import { Socket } from 'dgram';
-import { TransportOptions } from './models/transport-options';
+import Transport from 'winston-transport';
+import { InfoObject, TransportOptions } from './models/transport-options';
 import { DEFAULT_TRANSPORT_OPTIONS } from './constants/default-transport-options';
-import Transport = require('winston-transport');
 
 export class UDPTransport extends Transport {
     private udpTransportOptions: TransportOptions;
@@ -23,7 +23,7 @@ export class UDPTransport extends Transport {
         this.client.unref();
     }
 
-    log(info: any, callback: (error: Error | null, bytes: number | boolean) => void): void {
+    log(info: InfoObject, callback: (error: Error | null, bytes: number | boolean) => void): void {
         if (this.silent) {
             return callback(null, true);
         }
