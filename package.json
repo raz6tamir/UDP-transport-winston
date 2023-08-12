@@ -32,7 +32,9 @@
   },
   "homepage": "https://github.com/raz6tamir/UDP-transport-winston#readme",
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -45,6 +47,11 @@
     "winston": "^3"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/github": "^9.0.4",
+    "@semantic-release/npm": "^10.0.4",
+    "@semantic-release/release-notes-generator": "^11.0.4",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.10",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
@@ -86,6 +93,8 @@
     "transform": {
       "^.+\\.ts?$": "ts-jest"
     },
-    "transformIgnorePatterns": ["<rootDir>/node_modules/"]
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
   }
 }
