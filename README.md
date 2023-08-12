@@ -1,4 +1,4 @@
-[![Build Status](https://app.travis-ci.com/raz6tamir/UDP-transport-winston.svg?branch=master)](https://app.travis-ci.com/raz6tamir/UDP-transport-winston)
+![Github Actions Status](https://github.com/raz6tamir/UDP-transport-winston/actions/workflows/npm-publish.yml/badge.svg)
 ![npm](https://img.shields.io/npm/v/udp-transport-winston)
 ![NPM](https://img.shields.io/npm/l/udp-transport-winston)
 
@@ -61,3 +61,5 @@ logger.add(new UDPTransport({
     * (optional) `options.trailingLineFeedChar:string` character to separate messages
     * (optional) Inherited transport options: `options.format`, `options.level`, `options.silent`, `options.handleExceptions`
     
+___
+Made by @raz6tamir
