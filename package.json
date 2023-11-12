@@ -1,9 +1,13 @@
 {
   "name": "udp-transport-winston",
-  "version": "1.2.0",
+  "version": "2.0.3",
   "description": "A winston transport for UDP in typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.json",
     "lint": "eslint 'src/**/*.{js,ts}' --quiet",
