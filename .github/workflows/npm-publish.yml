@@ -49,6 +49,9 @@ jobs:
       - name: Install dependencies
         run: yarn install && yarn upgrade
 
+      - name: Build typescript
+        run: npm run build
+
       - name: Release
         run: npx semantic-release
         env:
