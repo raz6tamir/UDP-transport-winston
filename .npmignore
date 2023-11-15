@@ -1,6 +1,5 @@
 .github/
 test/
-dist/test/
 
 .idea/
 node_modules/
