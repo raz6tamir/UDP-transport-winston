@@ -20,7 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test]
     permissions:
-      contents: write
+      contents: write       # create git tags and GitHub releases
+      id-token: write       # OIDC token for npm provenance attestation
+      issues: write         # semantic-release comments on related issues
+      pull-requests: write  # semantic-release comments on related PRs
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
