@@ -11,11 +11,6 @@ jobs:
   release:
     name: Release${{ inputs.dry-run && ' (dry run)' || '' }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write       # create git tags and GitHub releases
-      id-token: write       # OIDC token for npm trusted publishing
-      issues: write         # semantic-release comments on related issues
-      pull-requests: write  # semantic-release comments on related PRs
     steps:
       - uses: actions/checkout@v4
         with:
