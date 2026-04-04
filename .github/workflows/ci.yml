@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+    branches-ignore:
+      - master
 
 permissions:
   contents: read
@@ -31,7 +33,7 @@ jobs:
           node-version: 22
           cache: yarn
       - run: yarn install --frozen-lockfile
-      - run: npm run build
+      - run: yarn build
       - run: npx semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
