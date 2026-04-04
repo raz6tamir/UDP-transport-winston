@@ -2,9 +2,8 @@ name: CI
 
 on:
   push:
-    branches:
-      - '**'
-      - '!master'
+    branches-ignore:
+      - master
 
 permissions:
   contents: read
