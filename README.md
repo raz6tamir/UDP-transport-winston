@@ -1,4 +1,5 @@
-![Github Actions Status](https://github.com/raz6tamir/UDP-transport-winston/actions/workflows/npm-publish.yml/badge.svg)
+![CI](https://github.com/raz6tamir/UDP-transport-winston/actions/workflows/ci.yml/badge.svg)
+![CI/CD](https://github.com/raz6tamir/UDP-transport-winston/actions/workflows/cicd.yml/badge.svg)
 ![npm](https://img.shields.io/npm/v/udp-transport-winston)
 ![NPM](https://img.shields.io/npm/l/udp-transport-winston)
 
