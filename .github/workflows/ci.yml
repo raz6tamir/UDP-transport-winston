@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write  # needed for npm OIDC verification in dry run
 
 jobs:
   lint:
@@ -16,20 +17,7 @@ jobs:
     uses: ./.github/workflows/test.yml
 
   release-dry-run:
-    name: Release (dry run)
-    runs-on: ubuntu-latest
     needs: [lint, test]
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - run: npx semantic-release --dry-run
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    uses: ./.github/workflows/release.yml
+    with:
+      dry-run: true

@@ -6,7 +6,10 @@ on:
       - master
 
 permissions:
-  contents: read
+  contents: write
+  id-token: write
+  issues: write
+  pull-requests: write
 
 jobs:
   lint:
@@ -16,24 +19,5 @@ jobs:
     uses: ./.github/workflows/test.yml
 
   release:
-    name: Release
-    runs-on: ubuntu-latest
     needs: [lint, test]
-    permissions:
-      contents: write       # create git tags and GitHub releases
-      id-token: write       # OIDC token for npm provenance attestation
-      issues: write         # semantic-release comments on related issues
-      pull-requests: write  # semantic-release comments on related PRs
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: yarn
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    uses: ./.github/workflows/release.yml
