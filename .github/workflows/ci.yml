@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write  # needed for npm OIDC verification in dry run
+  id-token: write
 
 jobs:
   lint:
