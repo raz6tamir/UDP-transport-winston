@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  workflow_call:
+    inputs:
+      dry-run:
+        type: boolean
+        default: false
+
+jobs:
+  release:
+    name: Release${{ inputs.dry-run && ' (dry run)' || '' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # create git tags and GitHub releases
+      id-token: write       # OIDC token for npm trusted publishing
+      issues: write         # semantic-release comments on related issues
+      pull-requests: write  # semantic-release comments on related PRs
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: npx semantic-release${{ inputs.dry-run && ' --dry-run' || '' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

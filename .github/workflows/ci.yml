@@ -2,9 +2,12 @@ name: CI
 
 on:
   push:
+    branches-ignore:
+      - master
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   lint:
@@ -12,3 +15,9 @@ jobs:
 
   test:
     uses: ./.github/workflows/test.yml
+
+  release-dry-run:
+    needs: [lint, test]
+    uses: ./.github/workflows/release.yml
+    with:
+      dry-run: true
