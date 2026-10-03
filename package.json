@@ -97,5 +97,8 @@
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/"
     ]
+  },
+  "resolutions": {
+    "@typescript-eslint/**/minimatch": "^9.0.7"
   }
 }
